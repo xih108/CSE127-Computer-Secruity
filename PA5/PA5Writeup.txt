@@ -1,0 +1,5 @@
+1.	First I check all the files in the backup folder, and found there is a file id_rsa which contains the private key, and a file config which contains the host information. So I ssh using the private rsa to the host.
+2.	Then I use tcpdump to listen to the conversation at interface eno2, where I found the email address sunjay@cse.127. So I built an connection between the mail sever using nc, then pretended myself as Deian and mail from deian@cse.127 to this email address and reply to my email account gir902.
+3.	From the received email, I know the ip address is 192.168.1.167 and port is in the 9000 range. With nmap -p- ip, I found the open port 9422. Then I wget ip:9422 to get the index.html.
+4.	I looked into the index.html and found a href = “token”, so I wget ip:9422/token in order to get the token.
+

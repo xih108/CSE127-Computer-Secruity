@@ -1,0 +1,2 @@
+The exploit works in the way that the buffer overflows and overwrites the return address ($ebp+4). 
+By making it point back to the buf address in target1, then the shellcode can be executed.

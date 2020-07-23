@@ -1,0 +1,37 @@
+Part 3a:
+1.Running time:  1.03073 s
+
+2.file:
+3a4a9c876d2b33a5a96bd0c7bb3933f711675d63e00216204b827ade79b8
+89326ceddde8e36b1ebb0b68f7d9ce87b48b2cbc6aa5e832bcc3054897ca
+a93bc00fd15acf83e7b6126055f7d1747bc291d149c2dc5d1a03a36e7e5d
+c44f5b50cfc1a1b0c02a148ca2962b9d6b995227c5fa7071be635410f07e
+1ca3beca4077a961
+
+generated collision:
+3b68782eebbcd31aa1dba35f7d900ac2c99b60df434edfe339aa410696bc
+9ed8cb1ee6cccc48bcdb8f4475dac94354684964295b9b5a7ef1e0dfd90d
+0cd298877872f30c4e0cd9d1286d775069e8e10b9c8e70bb17e62e2acb1a
+063aecc7fd65be85a61af4cddf0e68234097a7a8d12af09c4c6a1f4a7883
+f7595dc1d3a6c296
+
+3. They are the same.
+MD5(file)= 17108dae7792502f7af734b0f000c2db
+MD5(output)= 17108dae7792502f7af734b0f000c2db
+
+4. They are different.
+SHA256(file)= 9f2b4df6d213564eb73eaf1a9a6cf660f9931e457919965bd9691a88cd9c26e2
+SHA256(output)= 790832b96e2981ab04c9e35d4e94aa10eca8ea2df8e9ae4b3ce8ef531e128d53
+
+Part5:
+1. HMAC takes the password and message as 2 separate parameters, so it hashed into the message twice,
+which behaves like a pseudorandom function. So it can avoid the length extension.
+
+2.
+Based on the technique unsed in part3b, we can have two scripts with same MD5 but actually output different things.
+Regarding digital signature using md5, such condition may also happen, which may lead to a danger of those system where
+programs are mistakenly verfied integrity.
+
+3.
+Because an public exponent like 2^16 + 1 (fifth Fermat prime) is always safe with respect to matching e >> n/h,
+which gives attackers no spaces to construct a valid signature without knowing q and p.

@@ -1,0 +1,7 @@
+
+EOF
+digest=$(cat DIGEST | sed 's/(stdin)= //' )
+if [ "${0##*/}" == "good.sh" ]; then
+    echo "I mean no harm."
+else
+    echo "You are doomed!"

@@ -1,0 +1,24 @@
+gir902@c09-30:/var/mail$ nc -C smtp.cse.127  25
+220 ridl.cse.127 ESMTP Postfix (Ubuntu)
+MAIL FROM: deian@cse.127
+250 2.1.0 Ok
+RCPT TO: sunjay@cse.127
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+From: deian@cse.127
+To: sunjay@cse.127
+Subject: Reset token       
+Reply-To: gir902@c09-30.sysnet.ucsd.edu
+
+Reset token
+
+
+. 
+250 2.0.0 Ok: queued as 49003805A5
+quit
+221 2.0.0 Bye
+
+
+
+You have mail in /var/mail/gir902

@@ -1,0 +1,16 @@
+1.The exploit works in the way that the buffer overflows and overwrites the return address ($ebp+4). 
+By making it point back to the buf address in target1, then the shellcode can be executed.
+
+
+
+2.The exploit works in the way that the buffer overflows because when copying we include one extra byte.
+This extra byte overwrites $ebp so that we jump to some address that we control - buf address.
+Then the shellcode can be executed.
+
+
+3.The exploit works in the way that the count is a large enough integer which overflows so that it can pass the bounds check.
+Then count*64 would give a value larger than the size of buf.
+So it overflows and change the return address pointing back to an address we control - buf address.
+Then the shellcode can be executed.
+
+

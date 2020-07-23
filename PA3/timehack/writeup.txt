@@ -1,0 +1,10 @@
+Description of timehack functionality:
+For each byte of our guessed password, we run each possible chacracter for 150 times.
+Then find the median of the time it takes for the function check_pass for each guess and 
+we select the maximum one and make it to be our final guess for that byte. 
+As it would take longer for the function check_pass for a correct guess since it needs to check one more byte.
+Repeat doing this until we find the correct password.
+
+
+References used:
+NA  

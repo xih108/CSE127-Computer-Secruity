@@ -1,0 +1,25 @@
+Description of memhack functionality:
+For the first guessed char, store it one byte right before the page start.
+If it matches, it would moveforward and check the next byte.
+As it tries to access the protected memory, it would result page fault.
+Otherwise, check_pass would return 0, so we shouldnmake a different guess.
+Following this procedure, everytime store our alreday guessed password one byte left, and store the
+new guessed byte one byte right before the page start.
+Whenever there is a page fault which results from trying to access the protected memory, it means the guess is right,
+otherwise, try guessing a different character. Repeat doing this, until our guess is all right.
+
+
+References used:
+NA
+
+
+Description of timehack functionality:
+For each byte of our guessed password, we run each possible chacracter for 150 times.
+Then find the median of the time it takes for the function check_pass for each guess and
+we select the maximum one and make it to be our final guess for that byte.
+As it would take longer for the function check_pass for a correct guess since it needs to check one more byte.
+Repeat doing this until we find the correct password.
+
+
+References used:
+NA  
